@@ -7,6 +7,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
+  font-weight: 500;
 }
 
 .wrapper {
@@ -102,7 +103,7 @@ body {
 /* modal */
 
 .modal {
-  background-color: #ddd;
+  background-color: #eee;
   width: 100%;
   padding-left: calc(calc(100% - 1140px) / 2);
   padding-right: calc(calc(100% - 1140px) / 2);
@@ -113,16 +114,75 @@ body {
   position: absolute;
   left: 0;
   top: 100px;
+  font-size: 14px;
 }
 
 .modal_submenu {
-  flex-grow: 1;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style: none;
+}
+
+.modal_submenu li {
+  padding: 40px 30px 40px 0;
+  font-weight: 700;
 }
 
 .modal_submenu a {
   text-decoration: none;
   color: #000;
+}
+
+.modal_columns {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.modal_columns > div {
+  border-right: 1px #ccc solid;
+}
+.modal_columns .fourth_column {
+  border-right: none;
+}
+
+.modal_columns .fourth_column div {
+  padding-right: 0;
+}
+
+.modal_columns .news_big {
+  padding-left: 0;
+}
+
+.modal_columns > div > div {
+  padding: 0 20px 0 20px;
+}
+.modal_columns > div > div > div:nth-child(2) {
+  padding: 5px 0 0 25px;
+}
+
+.modal_columns .date {
+  color: #aaa;
+}
+
+.modal_columns .lead {
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+
+.modal_columns .news_small {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.news_small_image {
+}
+
+.news_small_text {
+  word-wrap: break-word;
+  flex-grow: 0.5;
+}
+
+.news_small .date {
 }
