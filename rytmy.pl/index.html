@@ -21,7 +21,7 @@
                 <!-- items -->
                 <nav class="nav_proper">
                     <ul>
-                        <li><a href="">#muzyka</a></li>
+                        <li><a href="" id='music-button'>#muzyka</a></li>
                         <li><a href="">#ulica</a></li>
                         <li><a href="">#sztosy</a></li>
                         <li><a href="">#wydarzenia</a></li>
@@ -41,7 +41,7 @@
             </div>
         </div>
          <!-- modal -->
-        <div class="modal music hidden">
+        <div class="modal music hidden" id='music-modal'>
             <!-- submenu -->
             <ul class="modal_submenu">
                 <li><a href="#">#hip-hop</a></li>
@@ -561,13 +561,13 @@
                 </div>
             </div>
              <!-- authors -->
-             <div class="authors_wrapper">
+            <div class="authors_wrapper">
                 <a href="#" class="nav_logo">
                     <img src="./assets/logo-rytmy.png" alt="logo">
                 </a>
                 <div class="proper_authors_wrap">
+                    <h5 class="authors_title">Autorzy:</h5>
                     <ul class="authors_list">
-                        <h5 class="authors_title">Autorzy:</h5>
                         <li class="list_author">
                             <a href="" class="author_profil">
                                 <img src='./assets/m.jpg' alt="" >
@@ -624,14 +624,27 @@
                         </li>
                     </ul>
                 </div>
-             </div>
+            </div>
         </div>
-                            
-            
-            <!-- authors -->
         <!-- footer -->
-
+        <footer>
+            <div class="copyrights">
+                <p>Copyrights 2021 ©
+                    Wszelkie prawa zastrzeżone</p>
+            </div>
+            <div class="other_things">
+                <ul>
+                    <li><a href="">O nas</a></li>
+                    <li><a href="">Promocja</a></li>
+                    <li><a href="">Reklama</a></li>
+                    <li><a href="">Kontakt</a></li>
+                    <li><a href="">Regulamin konkursu Rytmy.pl</a></li>
+                    <li><a href="">Polityka prywatności</a></li>
+                    <li><a href="">Polityka cookies</a></li>
+                </ul>
+            </div>
+        </footer>
     </div>
-       
+    <script src="script.js"></script>   
 </body>
 </html>
