@@ -122,7 +122,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 100px;
   font-size: 14px;
