@@ -113,6 +113,14 @@ body {
 
 /* modal*/
 
+.modal_wrapper {
+  position: fixed;
+  z-index: 1;
+  background-color: #fff;
+  height: 530px;
+  width: 100%;
+}
+
 .modal {
   background-color: #eee;
   width: 100%;
@@ -289,9 +297,21 @@ body {
 
 .slider_left {
   display: flex;
+  position: relative;
   flex-direction: column;
   font-size: 14px;
   width: 35%;
+  overflow: hidden;
+}
+
+.slider_left::after {
+  content: "";
+  /* display: block; */
+  position: absolute;
+  bottom: -100%;
+  width: 399px;
+  height: 400px;
+  background-color: rgb(252, 20, 44);
 }
 
 .slider_right {
@@ -332,17 +352,18 @@ body {
   width: 40px;
   height: 40px;
   position: absolute;
-  left: 29%;
+  right: 7%;
   bottom: 7%;
   background-color: transparent;
   color: #fff;
   border: 1px white solid;
   font-size: 30px;
   border-radius: 50%;
+  z-index: 1;
 }
 
 .left_button {
-  left: 25%;
+  right: 21%;
 }
 
 .slider_button:hover {
