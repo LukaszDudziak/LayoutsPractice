@@ -90,3 +90,5 @@ function changeElement() {
 }
 
 setInterval(changeElement, timeChange);
+
+//animations todo on left ::after??
