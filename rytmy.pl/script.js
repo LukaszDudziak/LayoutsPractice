@@ -46,7 +46,7 @@ clearModals = () => {
 //slider
 
 let activeElement = 0;
-const timeChange = 8000;
+const timeChange = 6000;
 
 //slider elements
 const sliderDate = document.getElementById("slider-date");
@@ -54,11 +54,7 @@ const sliderLead = document.getElementById("slider-lead");
 const sliderAuthor = document.getElementById("slider-author");
 const sliderRightImage = document.querySelector("#slider-right img");
 const sliderLeft = document.getElementById("slider-left");
-const sliderLeftAfter = window
-  .getComputedStyle(sliderLeft, "::after")
-  .getPropertyValue("bottom");
-
-console.log(sliderRightImage);
+const sliderOverlay = document.getElementById("slider-overlay");
 
 //new values
 const sliderDates = ["11 lutego 2021", "12 lutego 2021", "13 lutego 2021"];

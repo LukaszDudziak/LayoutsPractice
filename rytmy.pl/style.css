@@ -304,14 +304,18 @@ body {
   overflow: hidden;
 }
 
-.slider_left::after {
+.slider_overlay {
   content: "";
-  /* display: block; */
+  display: block;
   position: absolute;
   bottom: -100%;
   width: 399px;
   height: 400px;
   background-color: rgb(252, 20, 44);
+  transition: 3s;
+}
+
+.slider_overlay.animated {
 }
 
 .slider_right {
@@ -320,6 +324,7 @@ body {
 
 .slider_right img {
   height: 100%;
+  transition: 3s;
 }
 
 .slider_date {
@@ -370,6 +375,9 @@ body {
   cursor: pointer;
   background-color: #fff;
   color: rgb(252, 20, 44);
+}
+
+.slider_right {
 }
 
 /* main content  */
@@ -746,4 +754,33 @@ footer {
 
 .other_things ul li a:hover {
   text-decoration: underline;
+}
+
+@-webkit-keyframes overlayAnimation {
+  0% {
+  }
+  40% {
+  }
+  60% {
+  }
+  100% {
+  }
+}
+
+@keyframes overlayAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  80% {
+    transform: translateY(0);
+  }
+
+  90% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
