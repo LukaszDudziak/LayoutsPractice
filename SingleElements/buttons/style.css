@@ -1,0 +1,54 @@
+:root {
+  --first-color: yellow;
+  --hover-color: yellowgreen;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vw;
+  width: 100vw;
+}
+
+.fill-up-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10vw;
+  height: 4vw;
+  background-color: #333;
+  color: var(--first-color);
+  border: solid 0.2vw var(--first-color);
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  font-family: arial;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.fill-up-button::before {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: 0%;
+  width: 105%;
+  height: 0;
+  background-color: var(--first-color);
+  transition: 0.3s;
+}
+
+.fill-up-button:hover {
+  color: #fff;
+  border: solid 0.2vw var(--hover-color);
+  background-color: var(--hover-color);
+}
+
+.fill-up-button:hover::before {
+  background-color: var(--hover-color);
+  height: 100%;
+  z-index: -1;
+}
