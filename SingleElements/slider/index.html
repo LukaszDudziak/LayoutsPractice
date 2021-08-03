@@ -4,20 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
   <div class="slider-element">
     <div class="info-section">
-      <div class="element-name">lorem</div>
-      <div class="element-description">ipsum</div>
-      <button class="buy">Kup</button>
+      <div class="element-name" id='js-element-name'>Jarabacoa Organic - Dominican Republic</div>
+      <div class="element-description" id='js-element-description'>Medium roasted whole beans allowing the true flavor characteristic to come through for a remarkable taste.</div>
+      <button class="buy" id='js-buy'>Buy (16$)</button>
     </div>
     <div class='image-container'>
       <img src="./img/1.png" alt="">
     </div>
   </div>
-  
+  <button class="previous" id='js-previous'>Previous</button>
+  <button class="next" id='js-next'>Next</button>
+  <script src="main.js"></script>
 </body>
 </html>
