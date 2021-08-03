@@ -1,4 +1,7 @@
 /* font-family: 'Yanone Kaffeesatz', sans-serif; */
+:root {
+  --animation-time: 2s;
+}
 
 * {
   padding: 0;
@@ -22,10 +25,15 @@ body {
   border-radius: 3%;
   background-color: rgba(255, 255, 255, 0.815);
   overflow: hidden;
+}
 
-  /* -webkit-animation: slide 5s both;
+.slider-element-animation {
+  -webkit-animation: slide 5s both;
+  animation: slide var(--animation-time) linear;
+}
 
-  animation: slide 5s linear; */
+.slider-element-animation-reverse {
+  animation: slide var(--animation-time) reverse;
 }
 
 .slider-element::after {
