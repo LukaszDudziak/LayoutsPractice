@@ -25,24 +25,26 @@ const buyCoffee = document.getElementById("js-buy");
 let coffeeNumber = 0;
 let changeDescriptionsTimer;
 
-const coffeeChange = () => {
+const animationClassRemoval = () => {
+  sliderElement.classList.remove(
+    "slider-element-animation",
+    "slider-element-animation-reverse"
+  );
+};
+
+const coffeeChange = (button) => {
   coffeeName.innerHTML = names[coffeeNumber];
   coffeeDescription.innerHTML = descriptions[coffeeNumber];
   coffeeImage.src = images[coffeeNumber];
   buyCoffee.innerHTML = `Buy \(${prices[coffeeNumber]}\)`;
-  setTimeout(
-    () =>
-      sliderElement.classList.remove(
-        "slider-element-animation",
-        "slider-element-animation-reverse"
-      ),
-
-    1000
-  );
+  button.disabled = false;
+  setTimeout(animationClassRemoval, 1000);
 };
 
 const navigationHandler = (e) => {
   clearTimeout(changeDescriptionsTimer);
+  let button = e.target;
+  button.disabled = true;
   if (e.target.innerHTML === "Next") {
     coffeeNumber++;
     if (coffeeNumber >= names.length) {
@@ -57,7 +59,7 @@ const navigationHandler = (e) => {
     }
     sliderElement.classList.add("slider-element-animation-reverse");
   }
-  changeDescriptionsTimer = setTimeout(coffeeChange, 1000);
+  changeDescriptionsTimer = setTimeout(() => coffeeChange(button), 1000);
 };
 
 nextCoffee.addEventListener("click", navigationHandler);
