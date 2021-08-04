@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-icon-container {
+  position: fixed;
+  top: 25%;
+  right: 25%;
+  width: 40px;
+  height: 24px;
+}
+
+.menu-bar {
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+}
+
+.menu-bar::after {
+  content: "";
+  display: block;
+  transform: translateY(-12px);
+  height: 2px;
+  background-color: #000;
+}
+
+.menu-bar::before {
+  content: "";
+  display: block;
+  transform: translateY(10px);
+  height: 2px;
+  background-color: #000;
+}
+
+.menu-icon-container:hover .menu-bar::after {
+  opacity: 0;
+}
